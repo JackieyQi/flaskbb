@@ -169,6 +169,7 @@ def register():
 
         return redirect_or_next(url_for('forum.index'))
 
+    print "yjl register"
     return render_template("auth/register.html", form=form)
 
 

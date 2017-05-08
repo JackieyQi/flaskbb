@@ -12,6 +12,7 @@
 
     <div class="panel-body">
         <form class="form-horizontal" role="form" method="POST">
+            {{ form.csrf_token }}
             {{ form.hidden_tag() }}
             {{ emit_event('before-registration-form') }}
             {{ horizontal_field(form.username)}}
