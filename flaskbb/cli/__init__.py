@@ -15,6 +15,7 @@
     :copyright: (c) 2016 by the FlaskBB Team.
     :license: BSD, see LICENSE for more details.
 """
+print "yjl file name:",__name__
 from flaskbb.cli.main import flaskbb  # noqa
 from flaskbb.cli.plugins import plugins  # noqa
 from flaskbb.cli.themes import themes  # noqa

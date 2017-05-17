@@ -8,6 +8,7 @@
     :copyright: (c) 2014 by the FlaskBB Team.
     :license: BSD, see LICENSE for more details.
 """
+print "yjl file name:",__name__
 from flask_plugins import connect_event
 
 from flaskbb.plugins import FlaskBBPlugin

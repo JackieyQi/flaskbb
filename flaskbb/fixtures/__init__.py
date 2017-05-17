@@ -1,0 +1,1 @@
+print "yjl file name:",__name__

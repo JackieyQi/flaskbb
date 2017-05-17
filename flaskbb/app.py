@@ -8,6 +8,7 @@
     :copyright: (c) 2014 by the FlaskBB Team.
     :license: BSD, see LICENSE for more details.
 """
+print "yjl file name:",__name__
 import os
 import logging
 import time
@@ -52,6 +53,7 @@ from flaskbb.utils.settings import flaskbb_config
 
 
 def create_app(config=None):
+    print 'yjl app.create_app'
     """Creates the app.
 
     :param config: The configuration file or object.

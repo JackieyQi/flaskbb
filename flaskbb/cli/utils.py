@@ -9,6 +9,7 @@
     :copyright: (c) 2016 by the FlaskBB Team.
     :license: BSD, see LICENSE for more details.
 """
+print "yjl file name:",__name__
 import sys
 import os
 import re

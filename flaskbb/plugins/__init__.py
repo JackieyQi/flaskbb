@@ -8,6 +8,7 @@
     :copyright: (c) 2014 by the FlaskBB Team.
     :license: BSD, see LICENSE for more details.
 """
+print "yjl file name:",__name__
 import warnings
 from flask import current_app
 from flask_plugins import Plugin

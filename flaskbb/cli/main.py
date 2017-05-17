@@ -8,6 +8,7 @@
     :copyright: (c) 2016 by the FlaskBB Team.
     :license: BSD, see LICENSE for more details.
 """
+print "yjl file name:",__name__
 import sys
 import os
 import time
@@ -38,6 +39,7 @@ from flaskbb.utils.translations import compile_translations
 
 
 def make_app(script_info):
+    print "yjl file name:",__name__,'----make_app'
     config_file = getattr(script_info, "config_file")
     if config_file is not None:
         # check if config file exists

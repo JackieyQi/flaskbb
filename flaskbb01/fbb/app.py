@@ -2,8 +2,9 @@
 from flask import Flask
 from flask_login import current_user
 from fbb.user.views import user
+from fbb.user.models import Guest, User
 
-from fbb.extensions import (csrf, db, login_manager)
+from fbb.extensions import (csrf, db, login_manager, cache)
 
 
 from fbb.utils.helpers import time_utcnow
@@ -29,12 +30,17 @@ def configure_blueprints(app):
 def configure_extensions(app):
     csrf.init_app(app)
     db.init_app(app)
+    cache.init_app(app)
 
     login_manager.login_view = app.config["LOGIN_VIEW"]
     login_manager.refresh_view = app.config["REAUTH_VIEW"]
     login_manager.login_message_category = app.config["LOGIN_MESSAGE_CATEGORY"]
     login_manager.needs_refresh_message_category = app.config["REFRESH_MESSAGE_CATEGORY"]
     login_manager.anonymous_user = Guest
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        user_instance = U
 
 def configure_context_processors(app):
     @app.context_processor
